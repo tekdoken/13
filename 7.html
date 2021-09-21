@@ -6,16 +6,19 @@
 </head>
 <body>
 <script>
-    let a = [1, 25, 43, 48, 54, 62, 37, 98, 89, 10];
+    let a = [1, 25, 43, 43, 43, 48, 37, 43, 89, 10];
     let v = +prompt();
     for (let i = 0; i < a.length; i++) {
-        if (a[i] == v) {
-            while (i<a.length){
-                a[i] = a[i + 1];
-                i++
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] == v) {
+                while (i < a.length) {
+                    a[i] = a[i + 1];
+                    i++
+                }
             }
         }
-    }a[a.length-1]=0
+        a[a.length - 1] = 0
+    }
     document.write(a)
 </script>
 </body>
