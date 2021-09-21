@@ -8,14 +8,12 @@
 <script>
     let a = [1, 25, 43, 48, 54, 62, 37, 98, 89, 10];
     let v = +prompt();
-    let c = true
     for (let i = 0; i < a.length; i++) {
         if (a[i] == v) {
             while (i<a.length){
                 a[i] = a[i + 1];
                 i++
             }
-
         }
     }a.pop()
     document.write(a)
