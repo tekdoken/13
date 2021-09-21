@@ -12,22 +12,16 @@
 <script>
     let x = 0;
     let a = [];
-
     function add() {
         a[x] = document.getElementById('txt').value;
-        // alert("Element: " + a[x] + " Added at index " + x);
         x++;
         document.getElementById('txt').value = '';
     }
-
-    let e = '<hr>'
-
     function di() {
-        e = '<hr/>'
-        for (let i = 0; i < a.length; i++) {
-            e += "Element " + i + " = " + a[i] + "<br/>";
-        } e.sort()
-        document.getElementById("result").innerHTML = e;
+        a.sort(function (s, b) {
+            return b - s
+        })
+        document.getElementById("result").innerHTML = a;
     }
 </script>
 </body>
